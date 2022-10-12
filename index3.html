@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="meh-circule.png">
+    <title>K i s h a n - A b o u t</title>
+</head>
+<style>
+    #box1{
+        display: flex;
+        position: relative;
+        width: 99%;
+        height: 166px;
+        background-color: #008B8B;
+        box-shadow: 22px 2px 99px 1px grey;
+        border: none;
+    }
+    #box2{
+        display: flex;
+        position: relative;
+        width: 70%;
+        top: -70px;
+        height: 90px;
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: 22px 2px 99px 1px grey;
+        border: none;
+    }
+    #text{
+        position: relative;
+        top: -130px;
+        color: #008B8B;
+        font-family: 'Courier New', monospace;
+    }
+
+
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EFEFEF;
+}
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card{
+  height: 439px;
+  border-radius: 25px;
+  background-color: #FFF;
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #008B8B;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #008B8B;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070F4;
+}
+.name{
+    position: relative;
+    top: -160px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description{
+    position: relative;
+    top: -140px;
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button{
+    position: relative;
+    top: -120px;
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #008B8B;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background: #1ba7b1;
+}
+
+.swiper-navBtn{
+  color: #6E93f7;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: #4070F4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #6E93f7;
+  opacity: 1;
+}
+#content{
+    position: relative;
+    top: -90px;
+}
+.swiper-pagination-bullet-active{
+  background-color: #4070F4;
+}
+#myimg{
+    position: relative;
+    top: -210px;
+    height: 160px;
+
+   
+}
+#html{
+    position: inline;
+    left: -34%;
+    height: 60px;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 22px 2px 99px 1px grey;
+    border-radius: 9px;
+}
+#skill{
+    display: inline;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    font-family: 'Courier New', monospace;
+}
+#anim{
+    position: relative;
+    left: -1px;
+    height: 120px;
+    margin: 8px;
+    border-radius: 18px;
+    box-shadow: 22px 2px 99px 1px grey;
+}
+h4{
+    position: relative;
+    top: 40px;
+    margin: 12px;
+    color: #008B8B;
+}
+.animes{
+    margin: 2px;
+}
+.bottom-bar{
+    position: relative;
+    background-color: #008B8B;
+    height: 120px;  
+    align-items: center;
+    color: white;
+    top: 130px;
+}
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
+  #animelist{
+    color: #008B8B;
+  }
+}
+   
+</style>
+<body>
+    <center>
+    <div class="mian-box">
+        
+        <input type="box" id="box1">
+        <input type="box" name="" id="box2">
+        <h2 id="text">A B O U T</h2>
+    </div>
+
+    
+
+
+    <div class="main" id="content">
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <!--<img src="images/profile1.jpg" alt="" class="card-img">-->
+                            </div>
+                        </div><br>
+
+                        <div class="card-content">
+                            <img src="meh-circule.png" alt="" id="myimg">
+                            <h2 class="name">K i s h a n</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div><br><br>
+              
+                   
+
+               
+                       
+
+                      
+                     
+           
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+ <div class="skills">
+    <img src="icons8-html-5-48.png" alt="" id="html">
+    <img src="icons8-css3-48.png" alt="" id="html">
+    <img src="icons8-javascript-48.png" alt="" id="html">
+    <div class="percent">
+    <h3 id="skill">70%</h3>
+    <h3 id="skill">60%</h3>
+    <h3 id="skill">30%</h3>
+    <div class="three-dots">
+    <img src="icons8-more-48.png" alt="">
+</div>
+</div>
+ </div>
+ <div class="animes">
+    <h3 id="animelist">Favourite Anime's</h3>
+    <img src="naru.jpg" alt="" id="anim">
+    <img src="demon2.jpg" alt="" id="anim"><br>
+    <img src="thegarden.png" alt="" id="anim">
+    <img src="5cm.jpg" alt="" id="anim">
+    <a href="https://animixplay.to/"><h4>M o r e</h4></a>
+ </div>
+ <div class="bottom-bar">
+    <h3>@2022 Copyright<br>K I S H A N</h3>
+</div>
+
+</center>
+    </body>
+
+  <script>
+    var swiper = new Swiper(".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor: 'true',
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints:{
+        0: {
+            slidesPerView: 1,
+        },
+        520: {
+            slidesPerView: 2,
+        },
+        950: {
+            slidesPerView: 3,
+        },
+    },
+  });
+  </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+</body>
+</html>
